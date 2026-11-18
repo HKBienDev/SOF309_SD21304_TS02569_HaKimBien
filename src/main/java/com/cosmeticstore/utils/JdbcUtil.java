@@ -11,7 +11,7 @@ public class JdbcUtil {
 	static String driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
 	static String dburl = "jdbc:sqlserver://localhost:1433;database=CosmeticStore;encrypt=false";
 	static String username = "sa";
-	static String password = "12345";
+	static String password = "112009";
 	// nạp driver
 	static {
 		try {
