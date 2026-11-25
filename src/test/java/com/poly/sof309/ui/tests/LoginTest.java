@@ -16,7 +16,8 @@ import java.time.Duration;
 public class LoginTest {
     private WebDriver driver;
     private LoginPage loginPage;
-    private final String BASE_URL = "http://localhost:8080/login"; // URL web của sinh viên
+    private final String BASE_URL = "http://localhost:8080/SOF309_SD21304_TS02569_HaKimBien/login"; // URL web của sinh
+                                                                                                    // viên
 
     @BeforeEach
     public void setUp() {
@@ -27,7 +28,7 @@ public class LoginTest {
             options.addArguments("--no-sandbox");
             options.addArguments("--disable-dev-shm-usage");
         }
-        
+
         driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.manage().window().maximize();
@@ -43,7 +44,7 @@ public class LoginTest {
 
     @Test
     @DisplayName("Test giao diện đăng nhập thành công")
-    @Disabled("Bỏ comment @Disabled khi đã khởi động web ở local để chạy thật")
+
     public void testLoginSuccessUI() {
         driver.get(BASE_URL);
         loginPage.login("admin", "123");
@@ -51,4 +52,3 @@ public class LoginTest {
                 "Sau khi đăng nhập thành công phải chuyển về trang chủ");
     }
 }
-
